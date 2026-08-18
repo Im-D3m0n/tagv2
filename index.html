@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>TAGGED — Online Tag Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MAIN MENU -->
+  <div id="screen-menu" class="screen">
+    <h1 class="title">TAGGED<span class="dot">.</span></h1>
+    <p class="subtitle">Chase. Tag. Don't be it.</p>
+
+    <div class="menu-buttons">
+      <button id="btn-host" class="btn btn-primary">Host Online Game</button>
+      <button id="btn-join" class="btn btn-primary">Join Online Game</button>
+      <button id="btn-local" class="btn btn-secondary">Local 2-Player</button>
+    </div>
+
+    <p class="footnote">Online play works across devices — laptop, phone, tablet — anywhere with internet.</p>
+    <div class="legend">
+      <span>⚡ Speed</span><span>⬆ Jump boost</span><span>🛡 Shield</span><span>🌀 Portal</span>
+    </div>
+  </div>
+
+  <!-- HOST LOBBY -->
+  <div id="screen-host" class="screen hidden">
+    <h2>Hosting Game</h2>
+    <p>Share this code with friends:</p>
+    <div id="room-code" class="room-code">••••••</div>
+    <button id="btn-copy-code" class="btn btn-small">Copy Code</button>
+
+    <div class="name-row">
+      <label for="host-name">Your name</label>
+      <input id="host-name" maxlength="12" placeholder="Player 1">
+    </div>
+
+    <div id="lobby-players" class="lobby-players"></div>
+
+    <button id="btn-start-hosted" class="btn btn-primary" disabled>Waiting for players…</button>
+    <button class="btn btn-back" data-back>← Back</button>
+  </div>
+
+  <!-- JOIN LOBBY -->
+  <div id="screen-join" class="screen hidden">
+    <h2>Join Game</h2>
+    <div class="name-row">
+      <label for="join-name">Your name</label>
+      <input id="join-name" maxlength="12" placeholder="Player 2">
+    </div>
+    <div class="name-row">
+      <label for="join-code">Room code</label>
+      <input id="join-code" maxlength="6" placeholder="ABCD12" style="text-transform:uppercase">
+    </div>
+    <button id="btn-connect" class="btn btn-primary">Connect</button>
+    <p id="join-status" class="status-text"></p>
+    <button class="btn btn-back" data-back>← Back</button>
+  </div>
+
+  <!-- GAME -->
+  <div id="screen-game" class="screen hidden">
+    <div class="hud">
+      <div id="hud-timer" class="hud-item">2:00</div>
+      <div id="hud-status" class="hud-item">Get ready…</div>
+      <div id="hud-scores" class="hud-item"></div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+    <div id="touch-controls" class="touch-controls hidden"></div>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="screen-gameover" class="screen hidden">
+    <h2>Game Over</h2>
+    <div id="gameover-results" class="gameover-results"></div>
+    <button id="btn-play-again" class="btn btn-primary">Back to Menu</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
