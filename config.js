@@ -8,5 +8,5 @@
 //
 // The anon key is meant to be public/client-safe — that's what it's for.
 
-window.SUPABASE_URL = "https://YOUR-PROJECT-REF.supabase.co";
-window.SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
+window.SUPABASE_URL = https://lkycsevkdwetpjgvasxd.supabase.co/rest/v1/;
+window.SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxreWNzZXZrZHdldHBqZ3Zhc3hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY5OTU2NDEsImV4cCI6MjEwMjU3MTY0MX0.3S5YjjEShI41CP3iVoIcE2oiFZXMfm3Gg-DAXRHwOf8;
